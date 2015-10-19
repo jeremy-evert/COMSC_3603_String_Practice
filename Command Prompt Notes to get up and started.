@@ -1,0 +1,147 @@
+jeremy@jeremy-VirtualBox ~ $ ls
+Desktop    Downloads  Pictures  Templates  workspace
+Documents  Music      Public    Videos
+jeremy@jeremy-VirtualBox ~ $ cd workspace/
+jeremy@jeremy-VirtualBox ~/workspace $ ls
+Agent  AVALUE  Dumb2  HelloC  Life         Oz                       YorN
+ALPHA  Dumb    Dumb3  Joseph  openmp test  String_Practice_Project
+jeremy@jeremy-VirtualBox ~/workspace $ cd String_Practice_Project/
+jeremy@jeremy-VirtualBox ~/workspace/String_Practice_Project $ git init
+The program 'git' is currently not installed. You can install it by typing:
+sudo apt-get install git
+jeremy@jeremy-VirtualBox ~/workspace/String_Practice_Project $ sudo apt-get install git
+[sudo] password for jeremy: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following extra packages will be installed:
+  git-man liberror-perl
+Suggested packages:
+  git-daemon-run git-daemon-sysvinit git-doc git-el git-email git-gui gitk
+  gitweb git-arch git-bzr git-cvs git-mediawiki git-svn
+The following NEW packages will be installed:
+  git git-man liberror-perl
+0 upgraded, 3 newly installed, 0 to remove and 236 not upgraded.
+Need to get 3,346 kB of archives.
+After this operation, 21.6 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://archive.ubuntu.com/ubuntu/ trusty/main liberror-perl all 0.17-1.1 [21.1 kB]
+Get:2 http://archive.ubuntu.com/ubuntu/ trusty-updates/main git-man all 1:1.9.1-1ubuntu0.1 [698 kB]
+Get:3 http://archive.ubuntu.com/ubuntu/ trusty-updates/main git amd64 1:1.9.1-1ubuntu0.1 [2,627 kB]
+Fetched 3,346 kB in 2s (1,375 kB/s)
+Selecting previously unselected package liberror-perl.
+(Reading database ... 166223 files and directories currently installed.)
+Preparing to unpack .../liberror-perl_0.17-1.1_all.deb ...
+Unpacking liberror-perl (0.17-1.1) ...
+Selecting previously unselected package git-man.
+Preparing to unpack .../git-man_1%3a1.9.1-1ubuntu0.1_all.deb ...
+Unpacking git-man (1:1.9.1-1ubuntu0.1) ...
+Selecting previously unselected package git.
+Preparing to unpack .../git_1%3a1.9.1-1ubuntu0.1_amd64.deb ...
+Unpacking git (1:1.9.1-1ubuntu0.1) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Setting up liberror-perl (0.17-1.1) ...
+Setting up git-man (1:1.9.1-1ubuntu0.1) ...
+Setting up git (1:1.9.1-1ubuntu0.1) ...
+jeremy@jeremy-VirtualBox ~/workspace/String_Practice_Project $ git init
+Initialized empty Git repository in /home/jeremy/workspace/String_Practice_Project/.git/
+jeremy@jeremy-VirtualBox ~/workspace/String_Practice_Project $ git add .
+jeremy@jeremy-VirtualBox ~/workspace/String_Practice_Project $ git commit -m "first commit"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'jeremy@jeremy-VirtualBox.(none)')
+jeremy@jeremy-VirtualBox ~/workspace/String_Practice_Project $ git config user.name "Jeremy Evert"
+jeremy@jeremy-VirtualBox ~/workspace/String_Practice_Project $ git config user.email "jeremy.evert@swosu.edu"
+jeremy@jeremy-VirtualBox ~/workspace/String_Practice_Project $ git commit --amend -author
+error: did you mean `--author` (with two dashes ?)
+jeremy@jeremy-VirtualBox ~/workspace/String_Practice_Project $ git commit --amend --author
+error: option `author' requires a value
+usage: git commit [options] [--] <pathspec>...
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file <file>     read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup <commit>      use autosquash formatted message to fixup specified commit
+    --squash <commit>     use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    -s, --signoff         add Signed-off-by:
+    -t, --template <file>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <default>   how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit hook
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+
+jeremy@jeremy-VirtualBox ~/workspace/String_Practice_Project $ git commit --amend --author "Jeremy Evert"
+fatal: No existing author found with 'Jeremy Evert'
+jeremy@jeremy-VirtualBox ~/workspace/String_Practice_Project $ git config user.name "Jeremy Evert"
+jeremy@jeremy-VirtualBox ~/workspace/String_Practice_Project $ git commit --amend --author "Jeremy Evert"
+fatal: No existing author found with 'Jeremy Evert'
+jeremy@jeremy-VirtualBox ~/workspace/String_Practice_Project $ git commit --amend --author="Jeremy Evert <jeremy.evert@swosu.edu>"
+fatal: You have nothing to amend.
+jeremy@jeremy-VirtualBox ~/workspace/String_Practice_Project $ git commit -m "first commit"
+[master (root-commit) 9dbee65] first commit
+ 3 files changed, 155 insertions(+)
+ create mode 100644 .cproject
+ create mode 100644 .project
+ create mode 100644 src/String_Practice_Project.c
+jeremy@jeremy-VirtualBox ~/workspace/String_Practice_Project $ git remote add origin https://github.com/jeremy-evert/COMSC_3603_String_Practice.git
+jeremy@jeremy-VirtualBox ~/workspace/String_Practice_Project $ git push -u origin master
+Username for 'https://github.com': jeremy.evert@swosu.edu
+Password for 'https://jeremy.evert@swosu.edu@github.com': 
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 2.58 KiB | 0 bytes/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+To https://github.com/jeremy-evert/COMSC_3603_String_Practice.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+jeremy@jeremy-VirtualBox ~/workspace/String_Practice_Project $ git branch 
+* master
+jeremy@jeremy-VirtualBox ~/workspace/String_Practice_Project $ git branch dev
+jeremy@jeremy-VirtualBox ~/workspace/String_Practice_Project $ git branch
+  dev
+* master
+jeremy@jeremy-VirtualBox ~/workspace/String_Practice_Project $ git checkout dev
+Switched to branch 'dev'
+jeremy@jeremy-VirtualBox ~/workspace/String_Practice_Project $ 
+
