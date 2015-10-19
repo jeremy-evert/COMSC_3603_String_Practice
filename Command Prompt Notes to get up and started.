@@ -143,5 +143,115 @@ jeremy@jeremy-VirtualBox ~/workspace/String_Practice_Project $ git branch
 * master
 jeremy@jeremy-VirtualBox ~/workspace/String_Practice_Project $ git checkout dev
 Switched to branch 'dev'
+jeremy@jeremy-VirtualBox ~/workspace/String_Practice_Project $
+
+And now we clear our console with the clear command.
+
+Some old stuff copied for reference, but now have the correct branch pushed up to the upstream...
+
+jeremy@jeremy-VirtualBox ~/workspace/String_Practice_Project $ git push -u origin master
+Username for 'https://github.com': jeremy.evert@swosu.edu
+Password for 'https://jeremy.evert@swosu.edu@github.com': 
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 2.58 KiB | 0 bytes/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+To https://github.com/jeremy-evert/COMSC_3603_String_Practice.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+jeremy@jeremy-VirtualBox ~/workspace/String_Practice_Project $ git branch 
+* master
+jeremy@jeremy-VirtualBox ~/workspace/String_Practice_Project $ git branch dev
+jeremy@jeremy-VirtualBox ~/workspace/String_Practice_Project $ git branch
+  dev
+* master
+jeremy@jeremy-VirtualBox ~/workspace/String_Practice_Project $ git checkout dev
+Switched to branch 'dev'
+jeremy@jeremy-VirtualBox ~/workspace/String_Practice_Project $ clc
+No command 'clc' found, but there are 23 similar ones
+clc: command not found
+jeremy@jeremy-VirtualBox ~/workspace/String_Practice_Project $ clr
+No command 'clr' found, did you mean:
+ Command 'clm' from package 'mcl' (universe)
+ Command 'car' from package 'ucommon-utils' (universe)
+ Command 'clp' from package 'coinor-clp' (universe)
+ Command 'cl' from package 'cl-launch' (universe)
+ Command 'cyr' from package 'console-cyrillic' (universe)
+ Command 'csr' from package 'rheolef' (universe)
+ Command 'cli' from package 'mono-runtime' (main)
+clr: command not found
+jeremy@jeremy-VirtualBox ~/workspace/String_Practice_Project $ cls
+No command 'cls' found, but there are 18 similar ones
+cls: command not found
+jeremy@jeremy-VirtualBox ~/workspace/String_Practice_Project $ clear
+
+jeremy@jeremy-VirtualBox ~/workspace/String_Practice_Project $ ls
+Command Prompt Notes to get up and started.  src
+jeremy@jeremy-VirtualBox ~/workspace/String_Practice_Project $ cd ..
+jeremy@jeremy-VirtualBox ~/workspace $ ls
+Agent  AVALUE  Dumb2  HelloC  Life         Oz                       YorN
+ALPHA  Dumb    Dumb3  Joseph  openmp test  String_Practice_Project
+jeremy@jeremy-VirtualBox ~/workspace $ cd String_Practice_Project/
+jeremy@jeremy-VirtualBox ~/workspace/String_Practice_Project $ git add .
+jeremy@jeremy-VirtualBox ~/workspace/String_Practice_Project $ git commit -m "Have it run once in eclipse."
+[dev a222d75] Have it run once in eclipse.
+ 8 files changed, 241 insertions(+)
+ create mode 100644 Command Prompt Notes to get up and started.
+ create mode 100755 Debug/String_Practice_Project
+ create mode 100644 Debug/makefile
+ create mode 100644 Debug/objects.mk
+ create mode 100644 Debug/sources.mk
+ create mode 100644 Debug/src/String_Practice_Project.d
+ create mode 100644 Debug/src/String_Practice_Project.o
+ create mode 100644 Debug/src/subdir.mk
+jeremy@jeremy-VirtualBox ~/workspace/String_Practice_Project $ git push
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+In Git 2.0, Git will default to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': jeremy.evert@swosu.edu
+Password for 'https://jeremy.evert@swosu.edu@github.com': 
+Everything up-to-date
+jeremy@jeremy-VirtualBox ~/workspace/String_Practice_Project $ git branch
+* dev
+  master
+jeremy@jeremy-VirtualBox ~/workspace/String_Practice_Project $ git push origin master
+Username for 'https://github.com': jeremy.evert@swosu.edu
+Password for 'https://jeremy.evert@swosu.edu@github.com': 
+Everything up-to-date
+jeremy@jeremy-VirtualBox ~/workspace/String_Practice_Project $ git branch
+* dev
+  master
+jeremy@jeremy-VirtualBox ~/workspace/String_Practice_Project $ git push origin dev
+Username for 'https://github.com': jeremy.evert@swosu.edu
+Password for 'https://jeremy.evert@swosu.edu@github.com': 
+Counting objects: 13, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (12/12), 35.87 KiB | 0 bytes/s, done.
+Total 12 (delta 0), reused 0 (delta 0)
+To https://github.com/jeremy-evert/COMSC_3603_String_Practice.git
+ * [new branch]      dev -> dev
 jeremy@jeremy-VirtualBox ~/workspace/String_Practice_Project $ 
+
+
+
 
